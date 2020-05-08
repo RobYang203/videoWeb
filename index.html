@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Video Website</title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but frontend-test doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+
+    <header>
+        <div class="menuBtn">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><i class="fa fa-home"></i><span class="menuText">HOME</span></li>
+            <li><i class="fa fa-list"></i><span class="menuText">Collect</span></li>
+
+        </ul>
+    </nav>
+    <article>
+        <div class="videoBox">
+            <div class="vedio-preview">
+                <img src="https://i.ytimg.com/vi/bdpYpulGCKc/mqdefault.jpg" />
+                <div class="collections">
+                    <i class="fa fa-heart fa-2x"></i>
+                </div>
+                <div class="vedio-length">
+                    12:00
+                </div>
+            </div>
+            <section>
+                <h3 class="video-title">
+                    Steve Carell, welcome to Space Force.\nFrom the
+                </h3>
+                <p class="video-content">
+                    Steve Carell,
+                    welcome to Space Force.
+                    \nFrom the crew that brought you The Office, Space Force is coming soon to Netflix.
+                </p>
+            </section>
+        </div>
+        <div class="videoBox"></div>
+        <div class="videoBox"></div>
+        <div class="videoBox"></div>
+        <div class="videoBox"></div>
+    </article>
+    <footer>
+
+    </footer>
+
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        header {
+            position: fixed;
+            background-color: #FFF;
+            height: 50px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        nav {
+            position: fixed;
+            width: 300px;
+            height: calc(100vh - 50px);
+            background: linear-gradient(135deg, #ff516b 0%, #826cfd 100%);
+            top: 50px;
+            left: 0px;
+            z-index: 3;
+            overflow: scroll;
+        }
+
+        nav>ul {
+            list-style: none;
+            padding: 5px;
+            margin: 5px;
+            color: #FFF;
+            user-select: none;
+        }
+
+        nav>ul>li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        nav>ul>li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        article {
+            /* background: #888; */
+            position: fixed;
+            width: calc(100vw - 300px);
+            height: calc(100vh - 50px);
+            top: 50px;
+            left: 300px;
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: scroll;
+        }
+
+        footer {}
+
+        .menuBtn {
+            border: 0;
+            background: rgba(0, 0, 0, 0);
+            height: 100%;
+            margin-left: 10px;
+            cursor: pointer;
+            line-height: 63px;
+        }
+
+        .menuText {
+            margin: 0 15px;
+        }
+
+        .videoBox {
+            flex: 1 1 300px;
+            background-color: #FFF;
+            margin: 10px;
+            box-shadow: 4px 1px 10px 2px #c3c3c3;
+            border-radius: 5px;
+            height: 330px;
+            user-select: none;
+            position: relative;
+        }
+
+        .videoBox:hover {
+            transform: scale(1.02);
+        }
+
+        .videoBox img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            height: 130px;
+        }
+
+        .videoBox section {
+            padding: 0 0.6em;
+        }
+
+        .video-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .video-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+
+        .vedio-preview {
+            position: relative;
+            width: 100%;
+            height: 130px;
+        }
+
+        .vedio-length {
+            position: absolute;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            padding: 2px;
+            background: rgba(0, 0, 0, .6);
+            color: white;
+        }
+
+        .collections {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            color: red;
+            background: rgba(86, 84, 84, 0.6);
+            border: 0px;
+            border-bottom-left-radius: 100%;
+            width: 3.2em;
+            height: 3.5em;
+            line-height: 3.5em;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</body>
+
+</html>
