@@ -20,7 +20,7 @@ export default class App extends React.Component {
             nextPageToken : "" ,
             menuCmd: "open"
         };
-        this.mainWebUrl = location.href;
+        this.mainUrl = location.href;
         this.collectionList = JSON.parse(window.localStorage.getItem("allCollection"))|| [];
     }
 
@@ -77,13 +77,13 @@ export default class App extends React.Component {
     //mounting & updating
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={`${this.mainUrl}`}>
                 <Header onMenuClick={this.onMenuClick} />
                 <div className="content-area">
                     <Nav  menuCmd={this.state.menuCmd} />
                     <div className="article-border">
                         
-                        <Route exact path={[`{${this.mainWebUrl}/home/:pageID}`,`{${this.mainWebUrl}/home}`,`${this.mainWebUrl}/`]}  render={(props)=>
+                        <Route exact path={["/home/:pageID","/home","/"]}  render={(props)=>
                             (<ArticleHome {...props} 
                                 deleteCollection={this.deleteCollection}
                                 selectCollectionIndex={this.selectCollectionIndex}
@@ -91,7 +91,7 @@ export default class App extends React.Component {
                                 createVideoBox={this.createVideoBox}
                                 />)
                         } />
-                        <Route path={`{${this.mainWebUrl}/collect}`} render={(props)=>
+                        <Route path="/collect" render={(props)=>
                             ( <ArticleCollect {...props}  
                                 getAllCollection={this.getAllCollection}
                                 deleteCollection={this.deleteCollection}

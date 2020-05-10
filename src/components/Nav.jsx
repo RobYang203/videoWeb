@@ -11,7 +11,6 @@ class Nav extends React.Component {
         };
         console.log("Nav Build")
         this.collectionList = [];
-        this.mainWebUrl = location.href;
     }
     setLinkObject = (path , list)=>{
         return {
@@ -51,13 +50,13 @@ class Nav extends React.Component {
         return <nav className={this.state.menuClass}>
             <ul>
                 <li>
-                    <Link to={`{${this.mainWebUrl}/home}`} className="menuList-btn">
+                    <Link to={"/home"} className="menuList-btn">
                         <span className="menuBox menu-icon"><i className="fa fa-home"></i></span>
                         <span className="menuBox menu-text">HOME</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`{${this.mainWebUrl}/collect}`} className="menuList-btn">
+                    <Link to="/collect" className="menuList-btn">
                         <span className="menuBox menu-icon"><i className="fa fa-list"></i></span>
                         <span className="menuBox menu-text">Collect</span>
                     </Link>
