@@ -251,6 +251,7 @@ footer {}
     list-style: none;
     width: 100%;
     text-align: center;
+    padding-bottom: 20px;
 }
 .tabGroup.moblie{
     display: none;
@@ -316,10 +317,15 @@ footer {}
 
     nav.menu-zoomOut{
         width:300px;
+        
+    }
+
+    nav.close-animation{
         animation: menuClose-mobile;
         animation-duration: 1s;
         left: -300px;
     }
+
     .tabGroup{
         display:none;
     }

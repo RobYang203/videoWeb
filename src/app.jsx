@@ -36,16 +36,8 @@ export default class App extends React.Component {
     };
 
     onMenuClick = (e)=>{
-        let ret = "";
-        switch(this.state.menuCmd){
-            case "open":
-                ret = "zoomOut";
-                break;
-            case "zoomOut":
-                ret = "open";
-                break;
-        }
-        this.setState({menuCmd:ret});
+        
+        this.setState({menuCmd:"menuClick"});
        //browserHistory.push("/home")
     };
     getAllCollection = ()=>{
