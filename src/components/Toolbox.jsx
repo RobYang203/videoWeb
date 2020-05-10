@@ -23,7 +23,7 @@ function VideoBox(props) {
     return (
         <div className="videoBox">
             <div className="video-preview">
-                <img src={props.imgUrl?imgUrl.url:""} />
+                <img src={props.imgUrl?props.imgUrl.url:""} />
                 <div className="collections" onClick={(e) => { clickEvent(e, props.id) }}>
                     <i className={`fa ${heartClass} fa-2x`}></i>
                 </div>
