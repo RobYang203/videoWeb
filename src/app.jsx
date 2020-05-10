@@ -77,7 +77,7 @@ export default class App extends React.Component {
     //mounting & updating
     render() {
         return (
-            <BrowserRouter basename={`${this.mainUrl}`}>
+            <BrowserRouter basename={`/videoWeb`}>
                 <Header onMenuClick={this.onMenuClick} />
                 <div className="content-area">
                     <Nav  menuCmd={this.state.menuCmd} />
