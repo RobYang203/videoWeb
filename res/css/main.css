@@ -102,7 +102,7 @@ nav>ul>li:hover {
 article {
     /* background: #888; */
     /* width: calc(100vw - 300px);*/
-    height: calc(100vh - 50px); 
+    height: calc(100vh - 60px); 
     top: 0px;
     left: 0px;
     z-index: 1;
