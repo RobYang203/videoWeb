@@ -27,6 +27,16 @@ module.exports={
 				test:/\.css$/,//判斷是否為".css"
 				loader:["style-loader","css-loader"],//編譯器，把符合條件的檔案，編譯成指定樣式
 				exclude:/node_modules/
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/,
+				use: [
+				  {
+					loader: 'url-loader',
+					options: { limit: 40000 }
+				  },
+				  'image-webpack-loader'
+				]
 			}
 		]
 	},
@@ -41,7 +51,7 @@ module.exports={
 	],
 	devServer:{
 		contentBase:"./dist",
-		port:8008,
+		port:8088,
 		hot:true,
 		historyApiFallback: true
 	}
