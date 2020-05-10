@@ -74,7 +74,7 @@ class ArticleHome extends React.Component {
                 id: item.id,
                 title: item.snippet.title,
                 description:item.snippet.description,
-                imgUrl: item.snippet.thumbnails.standard.url || item.snippet.thumbnails.default,
+                imgUrl: item.snippet.thumbnails.standard || item.snippet.thumbnails.default,
                 publishedAt:item.snippet.publishedAt,
                 duration: this.convertDurationTime(content.duration)
             };
