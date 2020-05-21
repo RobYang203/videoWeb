@@ -61,11 +61,9 @@ class ArticleCollect extends React.Component {
         return <article>
                 <div className="viedoList">
                     {this.state.videoBoxList.length === 0 ? <div className="noInfo">No Collection</div>:this.state.videoBoxList}
-                </div>
-               
+                </div>              
                 {this.state.pageCount ===0?null:<TabGroup count={this.state.pageCount} clickEvent={this.onTabClick} activeID={this.state.nowPageID}/>}
-                {this.state.pageCount ===0?null:<TabGroupmMobile count={this.state.pageCount} clickEvent={this.onTabClick} activeID={this.state.nowPageID}/>}
-                
+                {this.state.pageCount ===0?null:<TabGroupmMobile count={this.state.pageCount} clickEvent={this.onTabClick} activeID={this.state.nowPageID}/>}              
             </article>
 
     }
