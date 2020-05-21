@@ -150,7 +150,10 @@ class ArticleHome extends React.Component {
         console.log(this.props);
         console.log("Is unmounting",this.state.unmounting)
         return  <article>
-                    {this.state.videoBoxList}
+                    <div className="videoList">
+                        {this.state.videoBoxList}
+                    </div>
+                 
                     <TabGroup count={this.info.maxPageCount} clickEvent={this.tabOnClick} activeID={this.state.tabClickID}/>
                     <TabGroupmMobile count={this.info.maxPageCount} clickEvent={this.tabOnClick} activeID={this.state.tabClickID}/>
                  </article>

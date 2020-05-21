@@ -100,18 +100,25 @@ nav>ul>li:hover {
 .article_video p{
     white-space: pre-wrap
 }
-article {
-    /* background: #888; */
-    /* width: calc(100vw - 300px);*/
+article{
     height: calc(100vh - 60px); 
     top: 0px;
     left: 0px;
     z-index: 1;
+    overflow-y: scroll;
+}
+article .videoList{
+    /* background: #888; */
+    /* width: calc(100vw - 300px);*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px;
+}
+.videoList::after{
+    content: '';
+    flex: 0 0 31%;
 }
 .noInfo{
     text-align: center;
@@ -305,6 +312,10 @@ footer {}
     }
     .menuBtn{
         display: none;
+    }
+    .videoList::after{
+        content: '';
+        flex: 0 0 33%;
     }
     .videoBox{
         flex: 0 0 33%;
