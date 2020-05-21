@@ -46,6 +46,7 @@ nav {
     overflow: scroll;
     vertical-align: top;
     animation: menuOpen-normal 1s;
+    overflow: hidden;
 }
 nav.menu-zoomOut{
     width: 50px;
@@ -109,7 +110,8 @@ article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow-y: scroll;
+    justify-content: space-around;
 }
 .noInfo{
     text-align: center;
@@ -147,14 +149,14 @@ footer {}
 }
 
 .videoBox {
-    flex: 0 0 300px;
+    flex: 0 0 31%;
     background-color: #FFF;
-    margin: 10px;
     box-shadow: 4px 1px 10px 2px #c3c3c3;
     border-radius: 5px;
     height: 330px;
     user-select: none;
     position: relative;
+    margin: 5px 0;
 }
 
 .videoBox:hover {
@@ -293,7 +295,7 @@ footer {}
     user-select: none;
 }
 
-@media screen AND (min-width:801px) AND (max-width:1300px){
+@media screen AND (min-width:991px) AND (max-width:1300px){
     nav{
         width: 50px;
     }
@@ -304,9 +306,16 @@ footer {}
     .menuBtn{
         display: none;
     }
-
+    .videoBox{
+        flex: 0 0 33%;
+    }
 }
+@media screen AND (min-width:700px) AND (max-width:990px){
 
+    .videoBox{
+        flex: 0 0 48%;
+    }
+}
 @media screen AND (max-width:800px){
     nav{
         position: fixed;
@@ -331,6 +340,12 @@ footer {}
     }
     .tabGroup.moblie{
         display: block;
+    }
+}
+@media screen AND (max-width:650px){
+
+    .videoBox{
+        flex: 1 1 50%;
     }
 }
 @keyframes menuClose-normal{
