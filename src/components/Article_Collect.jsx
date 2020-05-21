@@ -59,7 +59,7 @@ class ArticleCollect extends React.Component {
     render() {
         console.log(this.props.location);
         return <article>
-                <div className="viedoList">
+                <div className="videoList">
                     {this.state.videoBoxList.length === 0 ? <div className="noInfo">No Collection</div>:this.state.videoBoxList}
                 </div>              
                 {this.state.pageCount ===0?null:<TabGroup count={this.state.pageCount} clickEvent={this.onTabClick} activeID={this.state.nowPageID}/>}
